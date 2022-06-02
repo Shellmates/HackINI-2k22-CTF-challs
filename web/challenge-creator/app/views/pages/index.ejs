@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include("../partials/head"); %>
+  </head>
+
+  <body class="bg-gray-50">
+    <header>
+      <div class="flex flex-row bg-gray-100 px-5 py-2">
+        <a
+          href="/"
+          class="hover:underline font-bold hover:text-green-500 text-black py-1 px-4"
+        >
+          Challenge creator
+        </a>
+      </div>
+    </header>
+
+    <div
+      id="container"
+      class="flex flex-col justify-center items-center relative z-20"
+    >
+      <form id="challenge-form" class="pt-6 pb-2 my-2 w-1/2">
+        <h1 class="text-center text-2xl text-black font-bold">
+          Create challenge
+        </h1>
+        <div class="mb-4">
+          <label class="block text-sm font-bold mb-2" for="name"> Name </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500"
+            name="name"
+            id="name"
+            type="text"
+            placeholder="Name"
+            autofocus
+          />
+        </div>
+        <div class="mb-4 xl:w-96">
+          <label class="block text-sm font-bold mb-2" for="category">
+            Category
+          </label>
+          <select
+            class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            aria-label="Default select example"
+            name="category"
+            id="category"
+            form="challenge-form"
+          >
+            <option value="none" selected>Select category</option>
+            <option value="crypto">1. Crypto</option>
+            <option value="forensics">2. Forensics</option>
+            <option value="linux">3. Linux</option>
+            <option value="jail">4. Jail</option>
+            <option value="misc">5. Misc</option>
+            <option value="osint">6. OSINT</option>
+            <option value="programming">7. Programming</option>
+            <option value="pwn">8. Pwn</option>
+            <option value="reverse">9. Reverse</option>
+            <option value="web">10. Web</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-bold mb-2" for="value">
+            Value
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500"
+            name="value"
+            id="value"
+            type="number"
+            placeholder="100"
+          />
+        </div>
+        <div class="block md:flex items-center justify-between">
+          <button
+            class="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded border-b-4 border-green-500"
+            type="submit"
+            form="challenge-form"
+          >
+            Create challenge
+          </button>
+        </div>
+      </form>
+
+      <div id="container-output" class="pt-6 pb-2 my-2 w-1/2 hidden">
+        <h1 class="text-center text-2xl text-black font-bold">Result</h1>
+        <div class="mb-8">
+          <label class="block text-sm font-bold mb-2"> Challenge (JSON) </label>
+          <pre id="json-output"></pre>
+        </div>
+      </div>
+
+      <form
+        id="share-form"
+        class="pt-6 pb-2 my-2 w-1/2"
+        action="/share"
+        method="post"
+      >
+        <h1 class="text-center text-2xl text-black font-bold">
+          Share challenge
+        </h1>
+        <div class="mb-8">
+          <label class="block text-sm font-bold mb-2" for="share-challenge">
+            Challenge (JSON)
+          </label>
+          <textarea
+            id="share-challenge"
+            autofocus
+            class="form-textarea mt-1 block w-full"
+            name="challenge"
+            placeholder='{"name":"test","value":100,"category":"web"}'
+          ></textarea>
+        </div>
+        <div class="mb-4 justify-between" id="captcha-div"></div>
+        <div class="block md:flex items-center justify-between">
+          <button
+            class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded border-b-4 border-yellow-500"
+            type="submit"
+          >
+            Share with admin
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- TODO: Remove this script -->
+    <script nonce="<%= nonce %>">
+      let challenge, jsonCodeOutput;
+
+      challenge = JSON.parse(
+        new URL(window.location.href).searchParams.get("challenge")
+      );
+
+      console.log("challenge:", challenge);
+
+      jsonCodeOutput = {};
+    </script>
+
+    <script nonce="<%= nonce %>">
+      challenge = {
+        name: "Name",
+        category: "web",
+        value: 100,
+        meta: {
+          version: "0.1",
+        },
+      };
+      jsonCodeOutput = {
+        tag: "code",
+        attributes: {
+          class: "block overflow-x-scroll rounded language-json",
+        },
+        id: "json-code-output",
+      };
+
+      console.log("default challenge:", challenge);
+    </script>
+
+    <script nonce="<%= nonce %>">
+      const sitekey = "6LcxsckfAAAAAIngUXzlw931eegdBWErvFBPZ_K4";
+
+      function outputChallenge(chal) {
+        const jsonOutput = document.getElementById("json-output");
+        const shareChallenge = document.getElementById("share-challenge");
+        const containerOutput = document.getElementById("container-output");
+        const value = JSON.stringify(chal, undefined, 2);
+        const el = document.createElement(jsonCodeOutput.tag);
+
+        el.textContent = value;
+        el.id = jsonCodeOutput.id;
+        for (const [attribute, val] of Object.entries(
+          jsonCodeOutput.attributes
+        )) {
+          el.setAttribute(attribute, val);
+        }
+        hljs.highlightElement(el);
+        jsonOutput.appendChild(el);
+
+        shareChallenge.value = value;
+
+        containerOutput.classList.remove("hidden");
+      }
+
+      function parseChallenge() {
+        let assignedVal,
+          value,
+          parsedChal = {},
+          chal = null;
+
+        try {
+          chal =
+            JSON.parse(
+              new URL(window.location.href).searchParams.get("challenge")
+            ) || null;
+        } catch (err) {
+          console.error("Error:", err);
+        }
+
+        if (chal === null) {
+          const containerOutput = document.getElementById("container-output");
+          const jsonOutput = document.getElementById("json-output");
+
+          containerOutput.classList.add("hidden");
+          jsonOutput.innerHTML = "";
+          return;
+        }
+
+        for (const [key, defaultValue] of Object.entries(challenge)) {
+          value = chal[key];
+          console.log("key:", key);
+          console.log("defaultValue:", defaultValue);
+          console.log("value:", value);
+          if (typeof defaultValue === "number") {
+            value = parseInt(value);
+          }
+          assignedVal = value || defaultValue;
+          if (
+            typeof assignedVal === "object" &&
+            typeof defaultValue === "object"
+          ) {
+            if (parsedChal[key] === undefined) {
+              parsedChal[key] = {};
+            }
+            for (const [subKey, subDefaultValue] of Object.entries(
+              defaultValue
+            )) {
+              let subValue =
+                chal[key] !== undefined ? chal[key][subKey] : subDefaultValue;
+              console.log("subkey:", subKey);
+              console.log("subDefaultValue:", subDefaultValue);
+              console.log("subValue:", subValue);
+              parsedChal[key][subKey] = subValue;
+            }
+          } else {
+            parsedChal[key] = assignedVal;
+          }
+        }
+
+        console.log("parsedChal:", parsedChal);
+        outputChallenge(parsedChal);
+      }
+
+      function submitChallenge(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        const query =
+          "challenge=" +
+          encodeURIComponent(JSON.stringify(Object.fromEntries(formData)));
+        window.location.href = `${window.location.origin}/?${query}`;
+      }
+
+      function loadCaptcha() {
+        grecaptcha.render("captcha-div", {
+          sitekey: sitekey,
+        });
+      }
+
+      function updateHeight(el) {
+        el.style.height = "";
+        el.style.height = el.scrollHeight + 3 + "px";
+      }
+
+      window.onload = () => {
+        const challengeForm = document.getElementById("challenge-form");
+        const shareChallenge = document.getElementById("share-challenge");
+
+        challengeForm.onsubmit = submitChallenge;
+
+        parseChallenge();
+
+        updateHeight(shareChallenge);
+        shareChallenge.oninput = (event) => {
+          updateHeight(shareChallenge);
+        };
+
+        loadCaptcha();
+      };
+    </script>
+  </body>
+</html>

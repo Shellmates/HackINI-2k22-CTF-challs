@@ -1,0 +1,21 @@
+{
+  "name": "challenge-maker",
+  "version": "1.0.0",
+  "description": "Challenge maker",
+  "main": "index.js",
+  "author": "chenx3n",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "express-csp-header": "^5.1.0",
+    "express-recaptcha": "^5.1.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "puppeteer": "^13.7.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

@@ -1,0 +1,47 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width-device-width, initial-scale=1.0" />
+
+<link
+  href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+  rel="stylesheet"
+  nonce="<%= nonce %>"
+/>
+
+<link
+  href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.css"
+  rel="stylesheet"
+  nonce="<%= nonce %>"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-light.min.css"
+  integrity="sha512-o5v54Kh5PH0dgnf9ei0L+vMRsbm5fvIvnR/XkrZZjN4mqdaeH7PW66tumBoQVIaKNVrLCZiBEfHzRY4JJSMK/Q=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  nonce="<%= nonce %>"
+/>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"
+  integrity="sha512-yUUc0qWm2rhM7X0EFe82LNnv2moqArj5nro/w1bi05A09hRVeIZbN6jlMoyu0+4I/Bu4Ck/85JQIU82T82M28w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  nonce="<%= nonce %>"
+></script>
+
+<script nonce="<%= nonce %>">
+  hljs.highlightAll();
+</script>
+
+<script
+  src="https://www.google.com/recaptcha/api.js?render=explicit"
+  async
+  defer
+  nonce="<%= nonce %>"
+></script>
+
+<title>
+  <%- typeof title !== 'undefined' ? `Challenge: '${title}'` : 'Challenge Maker'
+  %>
+</title>

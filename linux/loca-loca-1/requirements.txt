@@ -1,0 +1,3 @@
+websockets
+werkzeug
+jinja2

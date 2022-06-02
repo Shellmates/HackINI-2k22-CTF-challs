@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '1700:5000'
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure

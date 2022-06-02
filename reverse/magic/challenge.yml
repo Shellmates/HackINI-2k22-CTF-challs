@@ -1,0 +1,24 @@
+name: "magic"
+author: "Muhammad"
+author_link: "https://github.com/muhammedBkf"
+category: reverse
+difficulty: ezmed
+description: |
+  > Only true wizards can find my magic secret.  
+  > The flag looks like: shellmates{magic_secret}.  
+  **Author** : Muhammad
+flags:
+  - shellmates{ELF_m4G!c_ByTes_:D}
+files:
+  - challenge/chall
+# DO NOT CHANGE
+tags:
+  - easy/medium
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+state: visible
+version: "0.1"

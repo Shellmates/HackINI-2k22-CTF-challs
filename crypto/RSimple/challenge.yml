@@ -1,0 +1,70 @@
+# NOTE: carefully read the comments
+#
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+#
+name: "RSimple"
+author: "badsUwu"
+author_link: "https://github.com/abdelmaoo"
+# Challenge category (pwn, web, reverse, crypto, forensics, linux, programming, misc)
+category: crypto
+# Challenge difficulty (easy, ezmed, medium, medhard, hard, extreme)
+difficulty: medium
+# Challenge description goes here
+# You can write markdown in it
+# Notes:
+# - for multi-line descriptions, make sure to add 2 spaces at the end of each line so that descriptions are actually displayed in multiple lines
+# - make sure to prepend the description with ">"
+# - always add the author line in the description (because CTFd doesn't add the author in the challenge description)
+description: |
+  > I created this unbreackable RSA applicstion, go ahead and try hack me.
+
+  **Author** : badsUwU
+flags:
+  # The flag should match this pattern: ^shellmates{[A-Za-z0-9_@><:\.\-\+\$#!]{12,}}$
+  # 1. It can have any alphanumeric characters in addition of the following
+  #    special characters (separated by comma): _, @, >, <, :, ., -, +, $, #, !
+  # 2. The string inside the flag format should be at least 12 characters long and
+  #    hard to guess.
+  - shellmates{who_7h0UghT_ThA7_RSa_w0ULd_B3_tHAT_3ASy_t0_BREAK}
+
+# Settings used for Dockerfile deployment
+# If not used, remove or set to null
+# image: image_name
+
+# Optional settings
+
+# connection_info is used to provide a link, hostname, or instructions on how to connect to a challenge
+connection_info: ncat -v --ssl  rsimple.challs.shellmates.club 443
+
+# Topics are used to help tell what techniques/information a challenge involves
+# They are generally only visible to admins
+# Accepts strings
+topics:
+  - RSA
+
+# Tags are used to provide additional public tagging to a challenge
+# Can be removed if unused
+# Accepts strings
+tags:
+  - RSA
+  - medium
+
+# Files to be uploaded alongside the challenge in CTFd
+# These paths are relative to the same directory where the challenge.yml file is.
+files:
+  - challenge/RSimple.py
+
+
+# DO NOT CHANGE
+#
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+state: visible
+version: "0.1"

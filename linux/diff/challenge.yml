@@ -1,0 +1,32 @@
+name: "diff"
+author: "Ouxs"
+author_link: "https://github.com/ouxs-19/"
+
+category: linux
+difficulty: easy
+
+description: |
+  > He is offering a great tool, if you only knew how to use it.      
+  
+  **Password** : ctf   
+  **Author** : Ouxs
+
+connection_info: ssh ctf@diff -o ProxyCommand="openssl s_client -quiet -connect diff.challs.shellmates.club:443 -servername diff.challs.shellmates.club"
+
+image: gcr.io/glowing-reserve-336013/diff
+
+flags:
+  - shellmates{You_ma$tered_th3_t00L}
+  
+tags:
+  - easy
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+version: "0.1"

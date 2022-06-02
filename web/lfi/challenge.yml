@@ -1,0 +1,30 @@
+name: "lfi"
+author: "Anis Chebah"
+
+category: web
+difficulty: easy
+
+description: |
+  >   We made some serious checks now, would you test it ?
+
+  **Author :** Anis Chebah
+
+connection_info: https://lfi.challs.shellmates.club
+
+tags:
+  - easy
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 50
+
+flags:
+  - shellmates{SH0uLD_H4Ve_MadE_th3_checK_recuRS1V3}
+
+state: visible
+
+version: "0.1"

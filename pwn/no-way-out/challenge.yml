@@ -1,0 +1,38 @@
+name: "No Way Out"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: pwn
+difficulty: medhard
+
+description: |
+  > Can you escape this nightmare?  
+
+  **Author**: chenx3n
+
+connection_info: ncat -v --ssl no-way-out.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/no-way-out
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 50
+
+flags:
+  - shellmates{0verwRITInG_FuTuRE_R3turn_aDdrEs$_l1ke_a_BOS$}
+
+files:
+  - ./challenge/no-way-out
+  - ./lib/libc-2.27.so
+  - ./lib/ld-2.27.so
+
+tags:
+  - medium/hard
+
+state: visible
+
+version: "0.1"

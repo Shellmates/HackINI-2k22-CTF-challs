@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+    1by1:
+        build: .
+        ports:
+        - "1337:8000"

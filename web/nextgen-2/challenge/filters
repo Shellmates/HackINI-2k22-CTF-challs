@@ -1,0 +1,12 @@
+@app.route("/request", methods=['POST'])
+def serve():
+    url = request.form['service']
+    html = ''
+    if search(r'(localhost|127.0.0.1|0.0.0.0)', url) :
+        html = render_template("error-404.html")
+    else :
+        if search(r'[a-z]+://[a-z0-9.-]+/', url):
+            with urlopen(url) as response:
+                html = response.read()        
+            
+    return html

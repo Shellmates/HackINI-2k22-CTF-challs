@@ -1,0 +1,30 @@
+name: "neighbors"
+author: "Ouxs"
+author_link: "https://github.com/ouxs-19/"
+category: crypto
+
+difficulty: ez-med
+description: |
+  > They say  it's such a rookie mistake to do.    
+  > Can you find it?     
+  **Author** : Ouxs
+
+flags:
+  - shellmates{F3RM47_H4S_Ju57_T0Ok_R$A_D0WN}
+
+files:
+  - challenge/chall
+  - challenge/challenge.py
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+tags:
+  - easy/medium
+
+state: visible
+version: "0.1"

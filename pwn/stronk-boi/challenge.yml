@@ -1,0 +1,39 @@
+name: "stronk boi"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: pwn
+difficulty: medhard
+
+description: |
+  > Check out my revolutionary in-memory file service!  
+
+  **Author**: chenx3n
+
+connection_info: ncat -v --ssl stronk-boi.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/stronk-boi
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 50
+
+flags:
+  - shellmates{0K4Y_you_PRovEd_y0U_h4V3_tH3_fOrC3}
+
+files:
+  - ./src/stronk-boi.c
+  - ./challenge/stronk-boi
+  - ./lib/libc-2.27.so
+  - ./lib/ld-2.27.so
+
+tags:
+  - medium/hard
+
+state: visible
+
+version: "0.1"

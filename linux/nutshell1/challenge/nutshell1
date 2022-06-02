@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+nutshell() {
+	
+	echo -n '>> '
+	read v1
+	echo -n '> '
+	v2=$(read $v1)
+	if [[ ! -z $v1 && ! -z $v2 ]]; then
+		echo noice
+		$(echo $v2) 
+		exit
+	fi
+	echo 'try again ... '
+
+}
+
+echo 'welcome to the ______'
+
+nutshell 2>/dev/null
+		

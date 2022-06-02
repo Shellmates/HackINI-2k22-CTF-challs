@@ -1,0 +1,34 @@
+name: "Whois"
+author: "souad"
+author_link: "https://github.com/SouadSEBAA"
+
+category: web
+difficulty: medium
+
+description: |
+  >   A web-based Whois service   
+
+  **Author :** souad
+
+connection_info:  https://whois.challs.shellmates.club 
+
+tags:
+  - medium
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 50
+
+flags:
+  - shellmates{i_$h0U1D_HaVE_R3AD_7HE_dOc_W3Ll}
+
+hints:
+  - "The source code of query.php is available in /query.php endpoint.  \nRead about anchors in regex syntax in PHP, the goal is to send an input that can pass the regex but still can make an injection"
+
+state: visible
+
+version: "0.1"

@@ -1,0 +1,37 @@
+name: "B0F0"
+author: "1m4D"
+author_link: "https://github.com/imadbourouche"
+
+category: pwn
+
+difficulty: easy
+
+description: |
+  > I can't change my date, can you ?  
+
+  **Author** : 1m4D
+
+flags:
+  - shellamtes{Y0u_H4vE_ChE4ngED_mY_V4R14Ble_98765}
+
+connection_info: ncat -v --ssl bof0.challs.shellmates.club 443
+
+files:
+  - ./src/challenge.c
+  - ./challenge/challenge
+
+tags:
+  - easy
+
+value: 500
+
+type: dynamic
+
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+
+version: "0.1"

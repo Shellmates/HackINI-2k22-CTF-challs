@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Whois</title>
+  </head>
+  <body>
+    <div>
+        <h2>Welcome to this web-based Whois service</h2>
+        <form action='/query.php'>
+            <label for="whois-db">Choose a Whois server to query :</label><br>
+            <select name="host" id="whois-db">
+                <option selected value="whois.verisign-grs.com">whois.verisign-grs.com</option>
+                <option value="whois.ripe.net">whois.ripe.net</option>
+                <option value="whois.arin.net">whois.networksolutions.com</option>
+            </select>
+
+            <br>
+            <label for="query">Enter your query :</label><br>
+            <input type="text" id="query" name="query" placeholder="php.net"><br>
+            <input type="submit" value="search" />
+        </form>     
+    </div>
+  </body>
+
+</html>

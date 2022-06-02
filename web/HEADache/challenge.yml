@@ -1,0 +1,30 @@
+name: "HEADache"
+author: "Muhammad"
+author_link: "https://github.com/muhammedBkf"
+category: web
+difficulty: easy
+description: |
+  > Wanna learn about some types of headache?  
+  > Let's dig right into it!  
+  **Author** : Muhammad
+flags:
+  - shellmates{hTTp_H34d37R5_&_p0L173N355_c4n_B3_U53FULL}
+
+connection_info: https://headache.challs.shellmates.club
+
+files:
+  - app/app.py
+
+tags:
+  - easy
+
+# DO NOT CHANGE
+#
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+state: visible
+version: "0.1"

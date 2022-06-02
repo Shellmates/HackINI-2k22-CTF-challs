@@ -1,0 +1,35 @@
+name: "My first ssh"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: warmup
+difficulty: beginner
+
+description: |
+  Connect with SSH using the command below and try to read the flag at `/flag.txt`.  
+  Make sure to have `openssl` installed:  
+
+    ```bash
+    sudo apt install openssl
+    ```
+
+  **Password**: ctf
+
+  **Author**: chenx3n
+
+connection_info: ssh ctf@my-first-ssh -o ProxyCommand="openssl s_client -quiet -connect my-first-ssh.challs.shellmates.club:443 -servername my-first-ssh.challs.shellmates.club"
+
+image: gcr.io/glowing-reserve-336013/my-first-ssh
+
+value: 50
+type: standard
+
+flags:
+  - shellmates{$sH_1s_FUn}
+
+tags:
+  - beginner
+
+state: visible
+
+version: "0.1"

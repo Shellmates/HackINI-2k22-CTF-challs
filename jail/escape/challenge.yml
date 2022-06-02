@@ -1,0 +1,31 @@
+name: "escape"
+author: "mel337"
+
+category: jail
+difficulty: hard
+
+description: |
+  > Try to replace my VMs    
+  > **Note** : Use the OVA (my_challenge.ova) that has been shared.  
+  > **Username**: kiloi    
+  > **Password**: fghj    
+  https://drive.google.com/file/d/1LWb2nne5l1VtRal-6mabEvEnUlHjInD2/view?usp=sharing  
+  **Author** : mel337  
+
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 15
+  minimum: 50
+
+flags: 
+  - shellmates{D0ck3R_35cap3_w1th_m0un7}
+
+tags:
+  - hard
+
+state: visible
+
+version: "0.1"

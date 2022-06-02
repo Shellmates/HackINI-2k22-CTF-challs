@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Headache</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='bulma.min.css')}}">
+  <style type="text/css">
+  img {
+    width: 400px;
+    height: auto;
+  }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title is-primary">
+        HEADACHE
+      </h1>
+      <p class="subtitle"> In this challenge you'll discover some types of <strong class="is-primary">Headache</strong>! </p> <img src="{{url_for('static', filename='meme.png')}}">
+      <p>Otherwise, if you want the flag just ask for it politely :D</p> {% if polite %}
+      <p>Ok! There u go : shellmates{hTTp_H34d37R5_&_p0L173N355_c4n_B3_U53FULL}</p> {% endif %} 
+    </div>
+  </section>
+</body>
+</html>

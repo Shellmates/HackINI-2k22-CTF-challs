@@ -1,0 +1,40 @@
+name: "JsandboxS"
+author: "yh_0x7"
+author_link: "https://github.com/yh-0x7"
+
+category: jail
+difficulty: medium
+
+description: |
+  > Just a casual JS jail.
+  > Retrieve the flag and get out of this jail.
+  
+  **Author** : yh_0x7
+
+connection_info: ncat -v --ssl jsandboxs.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/jsandboxs
+
+flags:
+  - shellmates{y0U_d0N'7_P4r3n7H3515_70_c4Ll_M3}
+
+topics:
+  - JS
+  - sandbox
+
+tags:
+  - medium
+  - JS
+
+files:
+  - challenge/script.js
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+version: "0.1"

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    nextGen
+  </title>
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/css/stylesheet.css') }}">
+</head>
+
+<body class="">
+
+  <div class="container">
+
+    {% block navbar %}{% endblock navbar %}
+    {% block content %}{% endblock content %}
+
+  </div>
+
+
+</body>
+
+</html>

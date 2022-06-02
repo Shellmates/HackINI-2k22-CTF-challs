@@ -1,0 +1,35 @@
+name: "less_jail"
+author: "1m4D"
+
+category: jail
+difficulty: easy
+
+description: |
+  > Can you escape from my less jail  
+
+  **Password** : ch1  
+  **Author** : 1m4D
+
+connection_info: ssh ch1@less-jail -o ProxyCommand="openssl s_client -quiet -connect less-jail.challs.shellmates.club:443 -servername less-jail.challs.shellmates.club"
+
+image: gcr.io/glowing-reserve-336013/less-jail
+
+flags:
+  - shellmates{My_LE$$_J41L_1S_VERy_We4K_76423}
+
+tags:
+  - easy
+  - linux
+
+value: 500
+
+type: dynamic
+
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+
+version: "0.1"

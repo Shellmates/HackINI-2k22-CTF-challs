@@ -1,0 +1,37 @@
+name: "B0F1"
+author: "1m4D"
+author_link: "https://github.com/imadbourouche"
+
+category: pwn
+
+difficulty: ezmed
+
+description: |
+  > Open a shell and get your flag :D  
+
+  **Author** : 1m4D
+
+flags:
+  - shellamtes{Y0u_4lS0_GET_A_$HEll_65431}
+
+connection_info: ncat -v --ssl bof1.challs.shellmates.club 443
+
+files:
+  - ./src/challenge.c
+  - ./challenge/challenge
+
+tags:
+  - easy/medium
+
+value: 500
+
+type: dynamic
+
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+
+version: "0.1"

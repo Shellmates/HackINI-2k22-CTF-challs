@@ -1,0 +1,38 @@
+name: "Challenge creator"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: web
+difficulty: extreme
+
+description: |
+  > Check out my latest project: Challenge creator!  
+  > It's still in early phase, so the code might look a little dirty.  
+
+  **Notes :**
+    - Flag is stored in the admin's browser cookie  
+    - Use Chrome/Chromium as a browser for better experience  
+
+  **Author :** chenx3n
+
+connection_info: https://challenge-creator.challs.shellmates.club
+
+image: gcr.io/glowing-reserve-336013/challenge-creator
+
+tags:
+  - extreme
+
+value: 1000
+type: dynamic
+
+extra:
+  initial: 1000
+  decay: 15
+  minimum: 50
+
+flags:
+  - shellmates{M4$t3r_of_cL1eNT_s1D3_hUsTL3s}
+
+state: visible
+
+version: "0.1"

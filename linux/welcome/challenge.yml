@@ -1,0 +1,34 @@
+name: "welcome"
+author: "Ouxs"
+author_link: "https://github.com/ouxs-19/"
+
+category: linux
+difficulty: easy
+
+description: |
+  > This welcome message seems to be interesting...
+  
+  **flag** : shellmates{what you have found}  
+  **Password** : ctf  
+  
+  **Author** : Ouxs
+
+connection_info: ssh ctf@welcome -o ProxyCommand="openssl s_client -quiet -connect welcome.challs.shellmates.club:443 -servername welcome.challs.shellmates.club"
+
+image: gcr.io/glowing-reserve-336013/welcome
+
+flags:
+  - shellmates{f379bbf265604f3514cda4aadbc05137}  
+
+tags:
+  - easy
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+version: "0.1"

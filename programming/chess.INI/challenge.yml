@@ -1,0 +1,34 @@
+name: "chess.INI"
+author: "yh_0x7"
+author_link: "github.com/yh-0x7"
+category: programming
+difficulty: medhard
+
+description: |
+  > Did you heard about chess!!! sure you did.
+  > Your mission now is to find the length of path that the king (K) takes to reach the target (T).
+  > the pawns (p) are like obstacles that the king can't pass.
+  > learn more about king's moves here : https://en.wikipedia.org/wiki/King_(chess)
+
+  **Author** : yh_0x7
+flags:
+  - shellmates{ch355_M4k35_M3n_w153r_4nd_CL34R-519H73D}
+
+topics:
+  - scripting
+  - programming
+  - chess
+
+tags:
+  - programming
+  - scripting
+  - medium/hard
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+state: visible
+version: "0.1"

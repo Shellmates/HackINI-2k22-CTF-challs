@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+RE="^[a-z0-9A-Z\\]+$"
+nutshell() {
+	echo -n '>'
+	read v1
+	
+	v2=$(read $v1)
+
+
+	if [[ ! $v2 =~ $RE || -z $v2 ]]; then
+		echo wrong input
+		echo "Doesn't match the whitelist"
+		exit 1
+	fi
+
+	export TERM='xterm'
+	echo 'now the train will give you the flag, wait for it'
+	sleep 1
+	sl $(echo $v2) -100 -ade && cat flag 
+}
+
+nutshell 

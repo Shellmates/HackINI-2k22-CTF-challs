@@ -1,0 +1,35 @@
+name: "pyjail"
+author: "1m4D"
+author_link: "https://github.com/imadbourouche"
+
+category: jail
+difficulty: medium
+
+description: |
+  > I filtered everything in my python interpreter, Can you get a shell ?  
+
+  **Author** : 1m4D
+
+connection_info: ncat -v --ssl pyjail.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/pyjail
+
+flags:
+  - shellmates{BR3kP01nT_BuiLT1N_D0_M4g1C_98765}
+
+files:
+  - ./challenge/challenge.py
+
+tags:
+  - medium
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+
+version: "0.1"

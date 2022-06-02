@@ -1,0 +1,64 @@
+# NOTE: carefully read the comments
+#
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+#
+name: "ezCap"
+author: "Elghazali"
+author_link: "https://github.com/Elghazali-99"
+# Challenge category (pwn, web, reverse, crypto, forensics, linux, programming, misc)
+category: forensics
+# Challenge difficulty (easy, ezmed, medium, medhard, hard, extreme)
+difficulty: easy
+# Challenge description goes here
+# You can write markdown in it
+# Notes:
+# - for multi-line descriptions, make sure to add 2 spaces at the end of each line so that descriptions are actually displayed in multiple lines
+# - make sure to prepend the description with ">"
+# - always add the author line in the description (because CTFd doesn't add the author in the challenge description)
+description: |
+  >Hmmmmm, there is something fishy inside this traffic! can u figure it out ? show us your wireshark skills.
+  
+  **Author** : Elghazali
+flags:
+  # The flag should match this pattern: ^shellmates{[A-Za-z0-9_@><:\.\-\+\$#!]{12,}}$
+  # 1. It can have any alphanumeric characters in addition of the following
+  #    special characters (separated by comma): _, @, >, <, :, ., -, +, $, #, !
+  # 2. The string inside the flag format should be at least 12 characters long and
+  #    hard to guess.
+  - shellmates{1_am_h3r3_h4ck3r_!}
+
+# Settings used for Dockerfile deployment
+# If not used, remove or set to null
+# image: image_name
+
+# Optional settings
+
+topics:
+  - network forensics
+
+# Tags are used to provide additional public tagging to a challenge
+# Can be removed if unused
+# Accepts strings
+tags:
+  - wireshark
+  - networking
+  - easy
+
+# Files to be uploaded alongside the challenge in CTFd
+# These paths are relative to the same directory where the challenge.yml file is.
+files:
+  - ezCap.pcapng
+
+# DO NOT CHANGE
+#
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+state: visible
+version: "0.1"

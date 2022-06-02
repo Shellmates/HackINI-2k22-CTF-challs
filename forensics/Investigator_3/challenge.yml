@@ -1,0 +1,46 @@
+# NOTE: carefully read the comments
+#
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+#
+name: "Investigator 3"
+author: "Chih3b"
+author_link: "https://github.com/Ch1h3b"
+# Challenge category (pwn, web, reverse, crypto, forensics, linux, programming, misc)
+category: forensics
+# Challenge difficulty (easy, ezmed, medium, medhard, hard, extreme)
+difficulty: hard
+# Challenge description goes here
+# You can write markdown in it
+# Notes:
+# - for multi-line descriptions, make sure to add 2 spaces at the end of each line so that descriptions are actually displayed in multiple lines
+# - make sure to prepend the description with ">"
+# - always add the author line in the description (because CTFd doesn't add the author in the challenge description)
+description: |
+  > The headmaster heard someone outside the office laughing, he said he xored his domain name with his favorite number, can you retrieve the real domain name ?  
+  > Flag format: shellmates{domainname}
+  **Author** : Chih3b
+flags:
+  # The flag should match this pattern: ^shellmates{[A-Za-z0-9_@><:\.\-\+\$#!]{12,}}$
+  # 1. It can have any alphanumeric characters in addition of the following
+  #    special characters (separated by comma): _, @, >, <, :, ., -, +, $, #, !
+  # 2. The string inside the flag format should be at least 12 characters long and
+  #    hard to guess.
+  - shellmates{h3ck3r.b4$e}
+
+tags:
+  - hard
+
+
+# DO NOT CHANGE
+#
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+state: visible
+version: "0.1"

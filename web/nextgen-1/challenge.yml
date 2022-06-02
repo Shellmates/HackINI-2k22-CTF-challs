@@ -1,0 +1,32 @@
+name: "nextGen 1"
+author: "souad"
+
+category: web
+difficulty: easy
+
+description: |
+  > Simple monitoring app.
+
+  **Note** : Flag is in the `/flag.txt` file of the web server
+
+  **Author** : souad
+
+connection_info: https://nextgen-1.challs.shellmates.club 
+
+tags:
+  - easy/medium
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 8
+  minimum: 50
+
+flags:
+  - shellmates{1T_W4S_4_qu1T3_3s4y_expl01tabL3_$$Rf}
+
+state: visible
+
+version: "0.1"

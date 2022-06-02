@@ -1,0 +1,31 @@
+name: "baby jail2"
+author: "Ouxs"
+author_link: "https://github.com/ouxs-19/"
+
+category: jail
+difficulty: easy
+
+description: |
+  > I didn't know it can be that dangerous.  
+  > Now I added some filters  
+
+  **Author** : Ouxs
+
+connection_info: ncat -v --ssl baby-jail2.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/baby-jail2
+
+flags:
+  - shellmates{Y0u_ar3_st4rting_t0_g3t_g00d_with_LAVE}
+tags:
+  - easy
+  
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+version: "0.1"

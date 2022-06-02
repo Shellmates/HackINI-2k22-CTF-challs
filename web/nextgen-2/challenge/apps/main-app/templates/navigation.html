@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+<div class="header clearfix">
+  <nav>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation" class="active"><a href="/">Main</a></li>
+      <li role="presentation" class="dropdown">
+          <a>Overview</a>
+          <div class="dropdown-content">
+          <a role="presentation" class="department" id="ACC" link="{{accLink}}/overview">Accounting Department</a>
+          <a role="presentation" class="department" id="HR" link="{{hrLink}}/overview">HR Department</a>
+        </div>
+      
+      </li>      
+      <li role="presentation" href=""><a>Stats</a></li>
+      <li role="presentation" href=""><a>Reports</a></li>
+    </ul>
+  </nav>
+  <h3 class="text-muted"> </h3>
+</div>
+{% endblock %}

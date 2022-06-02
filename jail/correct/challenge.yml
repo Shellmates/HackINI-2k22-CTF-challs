@@ -1,0 +1,34 @@
+name: "correct"
+author: Ouxs"
+
+category: jail
+difficulty: hard
+
+description: |
+  > Can you **check** this for me? 
+
+  **Author** : Ouxs
+
+connection_info: ncat -v --ssl correct.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/correct
+
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 15
+  minimum: 50
+
+flags: 
+  - shellmates{Sn4k3_objects_h4s_b33n_corrupted}
+
+files:
+  - challenge/challenge.py
+
+tags:
+  - hard
+
+state: visible
+
+version: "0.1"

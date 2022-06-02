@@ -1,0 +1,61 @@
+name: "Alien"
+author: "Elghazali"
+author_link: "https://github.com/Elghazali-99"
+# Challenge category (pwn, web, reverse, crypto, forensics, linux, programming, misc)
+category: misc
+# Challenge difficulty (easy, ezmed, medium, medhard, hard, extreme)
+difficulty: easy
+# Challenge description goes here
+# You can write markdown in it
+# Notes:
+# - for multi-line descriptions, make sure to add 2 spaces at the end of each line so that descriptions are actually displayed in multiple lines
+# - make sure to prepend the description with ">"
+# - always add the author line in the description (because CTFd doesn't add the author in the challenge description)
+description: |
+  >"Located in a strange lunar landscape of great geological interest, this site has one of the most important groupings of prehistoric cave art in the world.
+  > More than 15,000 drawings and engravings record the climatic changes, the animal migrations and the evolution of human life on the edge of the Sahara from 6000 BC
+  > to the first centuries of the present era. The geological formations are of outstanding scenic interest, with eroded sandstones forming ‘forests of rock’.  
+  > https://whc.unesco.org/en/list/179/" -source: read it.  
+ 
+  **Author** : Elghazali
+flags:
+  # The flag should match this pattern: ^shellmates{[A-Za-z0-9_@><:\.\-\+\$#!]{12,}}$
+  # 1. It can have any alphanumeric characters in addition of the following
+  #    special characters (separated by comma): _, @, >, <, :, ., -, +, $, #, !
+  # 2. The string inside the flag format should be at least 12 characters long and
+  #    hard to guess.
+  - shellmates{4lg3r1a_1$_B34t1fuL}
+
+tags:
+  - easy
+
+# Settings used for Dockerfile deployment
+# If not used, remove or set to null
+# image: image_name
+
+# Optional settings
+
+topics:
+  - OSINT
+
+# Tags are used to provide additional public tagging to a challenge
+# Can be removed if unused
+# Accepts strings
+tags:
+  - OSINT
+
+# Files to be uploaded alongside the challenge in CTFd
+# These paths are relative to the same directory where the challenge.yml file is.
+files:
+  - Alien.png
+
+# DO NOT CHANGE
+#
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+state: visible
+version: "0.1"

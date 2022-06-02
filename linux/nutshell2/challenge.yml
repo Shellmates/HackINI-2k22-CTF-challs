@@ -1,0 +1,31 @@
+name: "Nutshell 2"
+author: "badsUwU"
+author_link: "https://github.com/abdelmaoo"
+
+category: linux
+difficulty: medium
+
+description: |
+  > Counting backwards ?  
+
+  **Author** : badsUwU
+
+connection_info: ncat -v docker.shellmates.club $INSTANCE_PORT
+
+image: gcr.io/glowing-reserve-336013/nutshell2:latest
+docker_image: gcr.io/glowing-reserve-336013/nutshell2:latest
+
+flags:
+  - shellmates{nUt$H3ll_2_PWnED_vkfdnvjfk}
+
+tags:
+  - medium
+
+files:
+  - ./challenge/nutshell2
+
+value: 500
+type: docker
+
+state: visible
+version: "0.1"

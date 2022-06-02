@@ -1,0 +1,39 @@
+name: "nutshell supreme"
+author: "badsUwU"
+author_link: "https://github.com/abdelmaoo"
+
+category: linux
+difficulty: hard
+
+description: |
+  > Here is the final version of nutshell, don't even try...
+  > I use arch btw.
+
+  **Author** : badsUwU
+
+flags:
+  - shellmates{nUt$H3ll_supreme_good_job_12345}
+
+connection_info: ncat -v --ssl nutshell-supreme.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/nutshell-supreme
+
+topics:
+  - zsh
+
+tags:
+  - jail
+  - hard
+
+files:
+  - challenge/nutshell_supreme
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+version: "0.1"

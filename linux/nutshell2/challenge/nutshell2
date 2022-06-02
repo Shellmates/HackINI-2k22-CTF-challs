@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+
+nutshell() {
+	
+	echo -n "> "
+	read v1
+	touch $(echo $v1) 2>/dev/null
+	if [[ -f nutshell_file ]];then
+		read BIRTH MODIFY <<< $( stat nutshell_file --format "%w %y" )
+		echo "BIRTH = " $BIRTH
+		echo "MODIFY = " $MODIFY
+		read BIRTH MODIFY <<< $( stat nutshell_file --format "%W %Y" )
+		if [[ BIRTH -gt MODIFY ]];then
+			cat flag
+		fi
+	fi
+	rm $(echo $v1) 2>/dev/null
+	exit
+}
+
+echo 'welcome to  Nutshell2.0'
+
+nutshell
+

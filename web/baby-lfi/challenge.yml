@@ -1,0 +1,32 @@
+name: "baby lfi"
+author: "Anis Chebah"
+
+category: web
+difficulty: easy
+
+description: |
+  >   What is LFI ?  
+
+  **Author :** Anis Chebah
+
+connection_info: https://baby-lfi.challs.shellmates.club
+
+
+value: 500
+type: dynamic
+tags:
+  - baby
+  - php
+  - easy
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 50
+
+flags:
+  - shellmates{10CA1_F11e_1Nc1US10n_m4y_r3ve4l_in7Er3st1nG_iNf0Rm4t1on}
+
+state: visible
+
+version: "0.1"

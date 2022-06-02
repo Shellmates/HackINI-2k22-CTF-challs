@@ -1,0 +1,35 @@
+name: "My first ncat"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: warmup
+difficulty: beginner
+
+description: |
+  Most challenges are accessible remotely using `ncat`.  
+  On debian-based Linux systems, you can install `ncat` using the following command:  
+
+    ```bash
+    sudo apt install ncat
+    ```
+
+  You can connect to the challenge using the command below.
+
+  **Author**: chenx3n
+
+connection_info: ncat -v --ssl my-first-ncat.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/my-first-ncat
+
+value: 50
+type: standard
+
+flags:
+  - shellmates{NcAt_1s_c000LL}
+
+tags:
+  - beginner
+
+state: visible
+
+version: "0.1"

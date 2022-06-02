@@ -1,0 +1,29 @@
+name: "baby asm"
+author: "Ouxs"
+author_link: "https://github.com/ouxs-19/"
+category: reverse
+
+difficulty: easy
+description: |
+  > Put your tools aside for a second and start reading some real code.      
+  **Author** : Ouxs
+
+flags:
+  - shellmates{B4CK_T0_Th3_r0075!!}
+
+files:
+  - challenge/chall.asm
+  - challenge/enc
+
+tags:
+  - easy
+  
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+version: "0.1"

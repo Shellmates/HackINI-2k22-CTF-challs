@@ -1,0 +1,32 @@
+name: "baby jail1"
+author: "Ouxs"
+author_link: "https://github.com/ouxs-19/"
+
+category: jail
+difficulty: easy
+
+description: |
+  > Check out my project using python  
+  > Python really has some cool functions 
+
+  **Author** : Ouxs
+
+connection_info: ncat -v --ssl baby-jail1.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/baby-jail1
+
+flags:
+  - shellmates{D0n'7_m3$$_W17H_EVAL_kID0}  
+
+tags:
+  - easy
+
+value: 50
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+version: "0.1"

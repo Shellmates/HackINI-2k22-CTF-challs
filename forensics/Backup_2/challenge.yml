@@ -1,0 +1,73 @@
+# NOTE: carefully read the comments
+#
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+#
+name: "Backup 2"
+author: "Elghazali"
+author_link: "https://github.com/Elghazali-99"
+# Challenge category (pwn, web, reverse, crypto, forensics, linux, programming, misc)
+category: forensics
+# Challenge difficulty   (easy, ezmed, medium, medhard, hard, extreme)
+difficulty: ezmed
+# Challenge description goes here
+# You can write markdown in it
+# Notes:
+# - for multi-line descriptions, make sure to add 2 spaces at the end of each line so that descriptions are actually displayed in multiple lines
+# - make sure to prepend the description with ">"
+# - always add the author line in the description (because CTFd doesn't add the author in the challenge description)
+description: |
+  >After talking with Eva, she said " i had a homework about industry 4.0 and IoT, luckily, I found a ready presentation about it, first
+  >I checked its content, changed some slides then in the next day after turning on my PC, a text file popped up
+  >telling me to pay $1337 to decrypt my files. I don't know what to do. There are many important files on my hard drive. Please help !"
+  >Your mission as a cybersecurity analyst is to investigate and uncover evidence of this malicious attack by identifying and reporting the threat characteristics
+  >which is:
+  >The domain name from which the ransom was downloaded: `Domain.xyz`
+  >Ransomware's name: `name.extension`
+  >The masqueraded name of this malware: `masqueraded.extension`
+  
+  >>Flag format: `shellmates{domain.xyz_name.extension_masqueraded.extension}`
+
+  **Author** : Elghazali
+flags:
+  # The flag should match this pattern: ^shellmates{[A-Za-z0-9_@><:\.\-\+\$#!]{12,}}$
+  # 1. It can have any alphanumeric characters in addition of the following
+  #    special characters (separated by comma): _, @, >, <, :, ., -, +, $, #, !
+  # 2. The string inside the flag format should be at least 12 characters long and
+  #    hard to guess.
+  - shellmates{H4ck3er.com_d1rT00l.exe_svchost.exe}
+
+# Settings used for Dockerfile deployment
+# If not used, remove or set to null
+# image: image_name
+
+# Optional settings
+
+topics:
+  - DFIR
+  - disk forensics
+  - Ransomware
+  - medium
+
+# Tags are used to provide additional public tagging to a challenge
+# Can be removed if unused
+# Accepts strings
+tags:
+  - Autopsy
+  - MTK imager
+
+# Files to be uploaded alongside the challenge in CTFd
+# These paths are relative to the same directory where the challenge.yml file is.
+
+# DO NOT CHANGE
+#
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+state: visible
+version: "0.1"

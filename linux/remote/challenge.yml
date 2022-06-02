@@ -1,0 +1,33 @@
+name: "remote"
+author: "Ouxs"
+author_link: "https://github.com/ouxs-19/"
+
+category: linux
+difficulty: easy
+
+description: |
+  > At least give me a second to express my commands. 
+
+  **Password** : ctf  
+
+  **Author** : Ouxs
+
+connection_info: ssh ctf@remote -o ProxyCommand="openssl s_client -quiet -connect remote.challs.shellmates.club:443 -servername remote.challs.shellmates.club"
+
+image: gcr.io/glowing-reserve-336013/remote
+
+flags:
+  - shellmates{HOW_DID_U_M4d3_i7_HERE!}
+
+tags:
+  - easy
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+version: "0.1"

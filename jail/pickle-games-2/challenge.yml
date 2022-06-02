@@ -1,0 +1,40 @@
+name: "pickle games 2"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: jail
+difficulty: medium
+
+description: |
+  > I bet the first one was pretty easy after understanding what pickle is.  
+  > But now that I REDUCEd the inputs allowed, can you still reach the `FLAG` variable?  
+
+  **Author** : chenx3n
+
+connection_info: ncat -v --ssl pickle-games-2.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/pickle-games-2:latest
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 50
+
+flags:
+  - shellmates{No_RedUC1Ng_N3ED3d}
+
+tags:
+  - medium
+
+files:
+  - ./challenge/challenge.py
+
+requirements:
+  - "pickle games 1"
+
+state: visible
+
+version: "0.1"

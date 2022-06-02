@@ -1,0 +1,268 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+  font-family: Open Sans, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #525f7f;
+  text-align: left;
+  background-color: #f8f9fe;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #32325d;
+}
+
+h2, .h2 {
+	font-size: 1.25rem;
+}
+
+h5, .h5 {
+	font-size: 0.8125rem;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 4rem 2rem;
+  background-color: #e9ecef;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.text-muted {
+	color: #8898aa;
+}
+
+.text-sm {
+	font-size: 0.875rem !important;
+}
+
+.text-success {
+	color: #2dce89 !important;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+
+.card-body .row {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.col {
+	flex-grow: 1;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-auto {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-6 {
+	/* flex: 0 0 50%; */
+	max-width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.mb-0, .my-0 {
+	margin-bottom: 0 !important;
+}
+
+.mt-3, .my-3 {
+	margin-top: 1rem !important;
+}
+
+.mr-2, .mx-2 {
+	margin-right: 0.5rem !important;
+}
+
+.bg-gradient-red {
+	background: linear-gradient(87deg, #f5365c 0, #f56036 100%) !important;
+}
+
+.bg-gradient-blue {
+  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important; }
+
+.bg-gradient-indigo {
+  background: linear-gradient(87deg, #5603ad 0, #9d03ad 100%) !important; }
+
+.bg-gradient-purple {
+  background: linear-gradient(87deg, #8965e0 0, #bc65e0 100%) !important; }
+
+.bg-gradient-orange {
+  background: linear-gradient(87deg, #fb6340 0, #fbb140 100%) !important; }
+
+.bg-gradient-green {
+  background: linear-gradient(87deg, #2dce89 0, #2dcecc 100%) !important; }
+
+.bg-gradient-teal {
+  background: linear-gradient(87deg, #11cdef 0, #1171ef 100%) !important; }
+
+.bg-gradient-gray {
+  background: linear-gradient(87deg, #8898aa 0, #888aaa 100%) !important; }
+
+.bg-gradient-gray-dark {
+  background: linear-gradient(87deg, #32325d 0, #44325d 100%) !important; }
+
+.icon {
+	width: 3rem;
+	height: 3rem;
+}
+
+.card {
+	margin-bottom: 30px;
+	box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+	border: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 0.375rem;
+}
+
+.card-stats .card-body {
+	padding: 1rem 1.5rem;
+}
+
+.card-body {
+	flex: 1 1 auto;
+	min-height: 1px;
+	padding: 1.5rem;
+}
+
+.rounded-circle, .avatar.rounded-circle img {
+	border-radius: 50% !important;
+}
+
+
+
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  background-color: #fff;
+}
+.dropdown-content a:hover {
+  background-color: #e5e5e5;
+}

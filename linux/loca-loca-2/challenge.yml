@@ -1,0 +1,37 @@
+name: "Loca Loca 2"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: linux
+difficulty: hard
+
+description: |
+  > Okay okay, I understand now, I'm not gonna use commands with relative path again.  
+  > Anyway, that should be fixed now, it's totally secure now, right?  
+
+  **Author** : chenx3n
+
+connection_info: python3 client.py docker.shellmates.club $INSTANCE_PORT
+
+image: gcr.io/glowing-reserve-336013/loca-loca-2:latest
+docker_image: gcr.io/glowing-reserve-336013/loca-loca-2:latest
+
+value: 500
+type: docker
+
+tags:
+  - hard
+
+files:
+  - ./challenge/client.py
+  - ./challenge/server.py
+
+flags:
+  - shellmates{$OY_L0ca_cOn_M1_tiGRE_L0C4_L0Ca_l0c4}
+
+requirements:
+  - "Loca Loca 1"
+
+state: visible
+
+version: "0.1"

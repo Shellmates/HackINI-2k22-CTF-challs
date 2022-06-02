@@ -1,0 +1,40 @@
+name: "pickle games 3"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: jail
+difficulty: medhard
+
+description: |
+  > Things are getting a little more serious now.  
+  > Can you find a way to escape this pickle!  
+
+  **Author** : chenx3n
+
+connection_info: ncat -v --ssl pickle-games-3.challs.shellmates.club 443
+
+image: gcr.io/glowing-reserve-336013/pickle-games-3:latest
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 15
+  minimum: 50
+
+flags:
+  - shellmates{Y0ur3_g3Tt1Ng_g0od_at_tHIs_But_CaN_yOU_$0lv3_tHe_fiNAl_G4me?}
+
+tags:
+  - medium/hard
+
+files:
+  - ./challenge/challenge.py
+
+requirements:
+  - "pickle games 2"
+
+state: visible
+
+version: "0.1"

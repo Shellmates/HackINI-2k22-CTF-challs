@@ -1,0 +1,35 @@
+name: "nextGen 2"
+author: "souad"
+
+category: web
+difficulty: medium
+
+description: |
+  > We added some filters now.
+
+  **Note** : Flag is in the `/flag.txt` file of the web server  
+
+  **Author** : souad
+
+
+connection_info: https://nextgen-2.challs.shellmates.club 
+files: 
+  - challenge/filters
+
+tags:
+  - medium
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 8
+  minimum: 50
+
+flags:
+  - shellmates{Y0u_d1D_1t_aG4iN_!!}
+
+state: visible
+
+version: "0.1"

@@ -1,0 +1,40 @@
+name: "pyjail2"
+author: "Ouxs"
+author_link: "https://github.com/ouxs-19/"
+
+category: jail
+difficulty: hard
+
+description: |
+  > I filtered everything in my python interpreter, Can you get a shell ?  
+  > Again?    
+
+  **Password** : ctf  
+
+  **Author** : Ouxs
+
+connection_info: ssh ctf@pyjail2 -o ProxyCommand="openssl s_client -quiet -connect pyjail2.challs.shellmates.club:443 -servername pyjail2.challs.shellmates.club"
+
+image: gcr.io/glowing-reserve-336013/pyjail2
+
+requirements:
+  - "pyjail"
+
+flags:
+  - shellmates{I7's_4ll_4b0U7_PYYYYY_SKILZZZ}  
+
+files:
+  - challenge/chall.py
+
+tags:
+  - hard
+  
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+version: "0.1"

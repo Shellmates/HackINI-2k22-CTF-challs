@@ -1,0 +1,7 @@
+#!/bin/sh
+echo
+echo "=========== Hack.INI 22 =============="
+echo "uptime is $( uptime )"
+# f379bbf265604f3514cda4aadbc05137
+echo "date   is $( date   )"
+echo "======================================"

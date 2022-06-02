@@ -1,0 +1,29 @@
+name: "from zero to hero"
+author: "Ouxs"
+author_link: "https://github.com/ouxs-19/"
+category: programming
+
+difficulty: medium
+description: |
+  > Start your journey and be the one who learns them all. 
+         
+  **Author** : Ouxs
+
+connection_info: ncat -v --ssl  zero-to-hero.challs.shellmates.club 443
+
+
+flags:
+  - shellmates{T0POLOGICAL_$0RTING_FTW____!!!}
+
+tags:
+  - medium
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+
+state: visible
+version: "0.1"
